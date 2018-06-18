@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>&#x1F682</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> type="text/javascript"</script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="./assets/javascript/trains.js"></script>
+</head>
+
+<body>
+<section class="hero is-dark has-bkgd">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Train Times
+            </h1>
+            <h2 class="subtitle">
+              At the user's submission. ty. 
+            </h2>
+          </div>
+        </div>
+      </section>   
+
+<container class="box">
+<table class="table is-hoverable is-striped is-fullwidth">
+    <thead>
+      <tr>
+        <th>Train Name</abbr></th>
+        <th>Destination</th>
+        <th>Frequency (min)</abbr></th>
+        <th>Next Arrival (24h)</abbr></th>
+        <th>Minutes Away</abbr></th>
+      </tr>
+    </thead>
+    <tbody class="table is-striped is-fullwidth">
+    </tbody>
+</table>
+</container>
+
+<container class="box columns">
+    <div class="field column is-half is-offset-one-quarter" id="myForm">
+        
+            <div class="field">
+              <div class="control">
+                <input class="input is-primary" type="text" placeholder="Train Name" id="name">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input is-info" type="text" placeholder="Destination" id="destination">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input is-success" type="text" placeholder="First Train Time | HH.mm (24h)" id="trainTime">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input class="input is-warning" type="text" placeholder="Frequency (min)" id="frequency">
+              </div>
+            </div>
+            <div class="control" id="submitButton">
+                    <button class="button is-primary">Submit</button>
+            </div>
+            <div class="control" id="clearButton">
+                    <button class="button is-primary">Clear</button>
+            </div>
+        </div>
+</container>
+
+</body>
+</html>
