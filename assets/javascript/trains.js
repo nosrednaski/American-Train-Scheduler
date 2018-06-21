@@ -27,33 +27,16 @@ $(document).ready(function(){
         frequency = $("#frequency").val().trim();
 
               
-            var trainTimeCon = moment(trainTime, "HH:mm").subtract(1, "years");
-            console.log(trainTimeCon);
-      
-           
-            var now = moment();
-            console.log("CURRENT TIME: " + moment(now).format("hh:mm"));
-      
-            
-            var diffTime = moment().diff(moment(trainTimeCon), "minutes");
-            console.log("DIFFERENCE IN TIME: " + diffTime);
-      
-            
-            var tRemainder = diffTime % frequency;
-            console.log(tRemainder);
-      
-            
+            var trainTimeCon = moment(trainTime, "HH:mm").subtract(1, "years");                    
+            var now = moment();                           
+            var diffTime = moment().diff(moment(trainTimeCon), "minutes");           
+            var tRemainder = diffTime % frequency;                        
             var tMinutesTillTrain = frequency - tRemainder;
-            var tMinutesTillTrain = tMinutesTillTrain.toString();
-            console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
-      
-            
+            var tMinutesTillTrain = tMinutesTillTrain.toString();           
             var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-
             var nextTrain = (moment(nextTrain).format("hh:mm")).toString();
-            console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+            
 
-        // Code for the push
         trainData.ref().push({
           name: name,
           destination: destination,
@@ -70,7 +53,7 @@ $(document).ready(function(){
         firebase.database().ref().update(null);
       });
       
-      // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
+     
       trainData.ref().on("child_added", function(childSnapshot) {
        
           $("tbody").append("<tr></tr>");

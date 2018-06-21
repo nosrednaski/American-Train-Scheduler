@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<section class="hero is-dark has-bkgd">
+<section class="hero is-dark has-background">
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
@@ -38,12 +38,12 @@
         <th>Minutes Away</abbr></th>
       </tr>
     </thead>
-    <tbody class="table is-striped is-fullwidth">
+    <tbody>
     </tbody>
 </table>
 </container>
 
-<container class="box columns">
+<container class="box columns" id="margin">
     <div class="field column is-half is-offset-one-quarter" id="myForm">
         
             <div class="field">
@@ -66,14 +66,24 @@
                 <input class="input is-warning" type="text" placeholder="Frequency (min)" id="frequency">
               </div>
             </div>
-            <div class="control" id="submitButton">
-                    <button class="button is-primary">Submit</button>
-            </div>
-            <div class="control" id="clearButton">
-                    <button class="button is-primary">Clear</button>
-            </div>
+            <div class="field is-grouped">
+              <div class="control" id="submitButton">
+                      <button class="button is-primary">Submit</button>
+              </div>
+              <div class="control" id="clearButton">
+                      <button class="button is-primary">Clear</button>
+              </div>
+            </div>  
         </div>
 </container>
+
+
+<section class="footer hero has-background">
+  <div class="hero-body">
+    <div class="container">
+     </div>
+   </div>
+ </section>   
 
 </body>
 </html>

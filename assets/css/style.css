@@ -1,12 +1,10 @@
-.has-bkgd {
-    background: url('../images/train.jpg') top center;
-};
 
-.has-bkgd-bot {
-    background: url('../images/train.jpg') bottom center;
-    background-size: auto;
-};
 
-.has-margin {
-    margin: 0px 40px;
-};
+  .has-background{
+    background: url('../images/train.jpg') no-repeat center center fixed;
+    background-size: cover;
+  };
+
+  .box {
+    margin-bottom: 0px;
+  };
